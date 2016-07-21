@@ -55,9 +55,16 @@ html, body {
     color: #333333;    
 }
 
+.fa-heart {
+    	color: #E4287C;
+}
 
 #main_content {
 	
+	.author {
+		color: #008000;
+	}
+
 	.link_color {
 		color: #E4287C;
 	}
@@ -79,6 +86,7 @@ html, body {
 	.link {
 		padding: 2em 1em;
 		border-bottom: 1px solid #e9e9e9;
+		margin-left: inherit;
 		.title {
 
 			a {
@@ -92,5 +100,6 @@ html, body {
 	.back_link {
 		color: #008000;
 		font-weight: 700;
+		font-size: 15px;
 	}
 }

@@ -1,11 +1,12 @@
 <% @hash.map do |date, links| %>
 
-  <div class="well"> <%= date %>
+  <div class="well date_color"> 
+    <div class="back_link"><%= date %></div>
     <% links.each do |link| %>
       <div class="link row clearfix">
         <h2>
           <%= link_to link.title, link,class: "link_color"  %><br>
-          <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
+          <small>Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
         </h2>
 
         <% if current_user %>

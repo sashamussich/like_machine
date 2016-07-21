@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   
   resources :links do 
     member do 
-        put "like", to: :upvote 
-        put "dislike", to: :downvote
+        get "like", to: :upvote 
+        get "dislike", to: :downvote
       end
   end
 

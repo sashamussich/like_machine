@@ -1,0 +1,4 @@
+$('.unlike_link').bind('ajax:success', function(){
+   $('.unlikes_count_<%=@link.id%>').html('<%= escape_javascript @link.get_downvotes.size.to_s %>');
+   $('.likes_count_<%=@link.id%>').html('<%= escape_javascript @link.get_upvotes.size.to_s %>');
+});

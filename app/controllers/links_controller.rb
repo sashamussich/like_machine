@@ -5,8 +5,8 @@ class LinksController < ApplicationController
   before_action :set_auth#, except: [:index]
 
   def index
-    links = Link.all.order "created_at DESC"
-    @hash = links.group_by{|link| DateStuffies.pretty_just_date_format link.created_at}
+    links = Link.all
+    @hash = Link.make_hash_by_date links
   end
 
   def show
@@ -25,14 +25,12 @@ class LinksController < ApplicationController
   def create
     @link = current_user.links.build(link_params)
 
-    respond_to do |format|
-      if @link.save
-        format.html { redirect_to root_path, notice: 'Link was successfully created.' }
-      else
-        format.html { render :new }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
-      end
+    if @link.save
+      redirect_to root_path, flash: {success: 'Link was successfully created.' }
+    else
+      redirect_to :back, flash: { error: @link.errors}
     end
+    
   end
 
   # PATCH/PUT /links/1
@@ -62,13 +60,19 @@ class LinksController < ApplicationController
   def upvote
     @link = Link.find(params[:id])
     @link.upvote_by current_user
-    redirect_to :back
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js { render layout: false }
+    end
   end
 
   def downvote
     @link = Link.find(params[:id])
     @link.downvote_by current_user
-    redirect_to :back
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js { render layout: false }
+    end
   end
 
   private

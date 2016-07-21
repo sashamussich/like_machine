@@ -11,16 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720145533) do
+ActiveRecord::Schema.define(version: 20160721144847) do
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "user_id"
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
   end
 
+  add_index "links", ["cached_votes_down"], name: "index_links_on_cached_votes_down"
+  add_index "links", ["cached_votes_score"], name: "index_links_on_cached_votes_score"
+  add_index "links", ["cached_votes_total"], name: "index_links_on_cached_votes_total"
+  add_index "links", ["cached_votes_up"], name: "index_links_on_cached_votes_up"
+  add_index "links", ["cached_weighted_average"], name: "index_links_on_cached_weighted_average"
+  add_index "links", ["cached_weighted_score"], name: "index_links_on_cached_weighted_score"
+  add_index "links", ["cached_weighted_total"], name: "index_links_on_cached_weighted_total"
   add_index "links", ["user_id"], name: "index_links_on_user_id"
 
   create_table "users", force: :cascade do |t|

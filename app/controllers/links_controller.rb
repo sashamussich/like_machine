@@ -6,8 +6,7 @@ class LinksController < ApplicationController
 
   def index
     links = Link.all.order "created_at DESC"
-    # raise
-    @hash = links.group_by{|x| x.created_at.strftime("%Y-%m-%d")}
+    @hash = links.group_by{|link| DateStuffies.pretty_just_date_format link.created_at}
   end
 
   def show

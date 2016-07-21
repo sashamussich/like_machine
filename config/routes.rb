@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # get 'goto/:link_id', to: 'navigate#goto', as: :goto
 
-  root to: "home#index" 
+  root to: "links#index" 
 
   get 'auth/:provider/callback', to: "sessions#create"
 

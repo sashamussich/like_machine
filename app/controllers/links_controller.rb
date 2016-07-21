@@ -1,28 +1,22 @@
-class HomeController < ApplicationController
+class LinksController < ApplicationController
   
-  before_action :set_auth
-
   before_action :set_link, only: [:show, :edit, :update, :destroy]
+  
+  before_action :set_auth#, except: [:index]
 
-  before_filter :authenticate_user!, except: [:index, :show]
-
-  # GET /links
-  # GET /links.json
   def index
-    @links = Link.all
+    links = Link.all.order "created_at DESC"
+    # raise
+    @hash = links.group_by{|x| x.created_at.strftime("%Y-%m-%d")}
   end
 
-  # GET /links/1
-  # GET /links/1.json
   def show
   end
 
-  # GET /links/new
   def new
     @link = current_user.links.build
   end
 
-  # GET /links/1/edit
   def edit
   end
 
@@ -34,8 +28,7 @@ class HomeController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: 'Link was successfully created.' }
-        format.json { render :show, status: :created, location: @link }
+        format.html { redirect_to root_path, notice: 'Link was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @link.errors, status: :unprocessable_entity }
@@ -82,7 +75,7 @@ class HomeController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_link
-      @link = Link.find(params[:id])
+      @link = Link.find(params[:id]) || @link
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -91,6 +84,7 @@ class HomeController < ApplicationController
     end
 
     def set_auth
-    @auth = session[:omniauth] if session[:omniauth]
-  end
+      @auth = session[:omniauth] if session[:omniauth]
+    end
+
 end

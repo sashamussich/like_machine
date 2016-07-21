@@ -16,19 +16,62 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+
+html, body {
+	font-family: 'Raleway', sans-serif;
+}
 
 #logo {
-	font-size: 26px;
-	font-weight: 700;
-	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
 	letter-spacing: -1px;
 	padding: 15px 0;
 	a {
-		color: #2F363E;
+		color: #E4287C;
 	}
 }
 
+#facebook_header {
+		margin-top: 6px;
+		margin-right: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	
+	margin-right: -20px;
+	margin-left: 0px;
+
+	
+}
+
+.navbar-default .navbar-nav .submit_link {
+	color: #008000;
+	font-weight: 700;
+}
+
+.navbar-default .navbar-nav #sign_out_link {
+    color: #333333;    
+}
+
+
 #main_content {
+	
+	.link_color {
+		color: #E4287C;
+	}
+	
+	.fa-heart {
+    	color: #E4287C;
+	}
+
+	.fa-bolt {
+	    top: -5%;
+	    left: 2%;
+	    font-size: 70%;
+	}
+
 	#content {
 		float: none;
 	}
@@ -43,16 +86,11 @@
 			}
 		}
 	}
-	.comments_title {
-		margin-top: 2em;
+	.submit {
+		background-color: #008000;
 	}
-	#comments {
-		.comment {
-			padding: 1em 0;
-			border-top: 1px solid #E9E9E9;
-			.lead {
-				margin-bottom: 0;
-			}
-		}
+	.back_link {
+		color: #008000;
+		font-weight: 700;
 	}
 }

@@ -3,6 +3,7 @@
 <head>
   <title>Like Machine</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -14,13 +15,13 @@
 	        <nav class="collapse navbar-collapse navbar-ex1-collapse">
 	        	<% if current_user %>
 	        		<ul class="nav navbar-nav navbar-right">
-		    			<li><%= link_to 'Submit link', new_link_path %></li>
-		    			<li>Hello, <% current_user.name %>  <%= image_tag(@auth['info']['image'], width: '40', height: '40', class: 'img-circle') %> </li> 
-		    			<li><%= link_to "Sign out", sign_out_path, mehtod: :delete %></li>
+		    			<li id="facebook_header">Hello, <%= current_user.name %>  <%= image_tag(@auth['info']['image'], width: '40', height: '40', class: 'img-circle') %> </li> 
+		    			<li><%= link_to 'Post link', new_link_path, class: "submit_link" %></li>
+		    			<li id="sign_out_link"><%= link_to "Sign out", sign_out_path, mehtod: :delete %></li>
 	    			</ul>
 	    		<% else %>
 	    			<ul class="nav navbar-nav navbar-right">
-	    				<li>Sign in with   <span> <%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %> <% end %></span></li>
+	    				<li id="facebook_header">Sign in with   <span> <%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %> <% end %></span></li>
 	    			</ul>
 	    		<% end %>
 	        </nav>

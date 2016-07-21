@@ -49,3 +49,4 @@ gem 'acts_as_votable'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'omniauth-facebook'
+gem "font-awesome-rails"

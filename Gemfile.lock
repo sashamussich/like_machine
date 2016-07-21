@@ -37,6 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     acts_as_votable (0.10.0)
+    animate-rails (1.0.10)
+      rails
     arel (6.0.3)
     autoprefixer-rails (6.3.3.1)
       execjs
@@ -178,6 +180,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable
+  animate-rails
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)

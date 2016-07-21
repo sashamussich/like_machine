@@ -46,6 +46,7 @@ group :development do
 end
 
 gem 'acts_as_votable'
+gem "animate-rails"
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'omniauth-facebook'

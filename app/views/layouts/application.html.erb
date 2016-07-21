@@ -5,13 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="animate.min.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<header class="navbar navbar-default" role="navigation">
 	    <div class="navbar-inner">
 	      <div class="container">
-	        <div id="logo" class="navbar-brand">
+	        <div id="logo" class="navbar-brand logo">
                 <i class="fa fa-heart"></i>
 	        	<%= link_to "Like Machine", root_path %>					
 	        </div>
@@ -42,3 +43,9 @@
 	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+  $( ".logo" ).hover(function() {
+    $(this).animateCss('rubberBand');
+  });
+</script>>

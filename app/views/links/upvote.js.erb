@@ -1,4 +1,6 @@
-$('.like_link').bind('ajax:success', function(){
+$('.like_link_<%=@link.id%>').bind('ajax:success', function(){
    $('.unlikes_count_<%=@link.id%>').html('<%= escape_javascript @link.get_downvotes.size.to_s %>');
    $('.likes_count_<%=@link.id%>').html('<%= escape_javascript @link.get_upvotes.size.to_s %>');
+   $('.like_link_<%=@link.id%>').attr('disabled', 'disabled');
+   $('.unlike_link_<%=@link.id%>').removeAttr('disabled');
 });

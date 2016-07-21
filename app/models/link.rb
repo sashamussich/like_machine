@@ -3,7 +3,8 @@ class Link < ActiveRecord::Base
 
    acts_as_votable
 
-   validates :title, :url, presence: true, uniqueness: true
+   validates :title, presence: true, uniqueness: true
+   validates :url, :url => true, :presence => true, uniqueness: true
 
    default_scope { order('cast(created_at as date) desc, cached_votes_up desc') } 
 

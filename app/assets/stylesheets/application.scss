@@ -33,17 +33,18 @@ html, body {
 	}
 }
 
+.fa-heart {
+    	color: #E4287C;
+}
+
 #facebook_header {
 		margin-top: 6px;
 		margin-right: 10px;
 }
 
 .navbar-default .navbar-nav > li > a {
-	
 	margin-right: -20px;
 	margin-left: 0px;
-
-	
 }
 
 .navbar-default .navbar-nav .submit_link {
@@ -53,10 +54,6 @@ html, body {
 
 .navbar-default .navbar-nav #sign_out_link {
     color: #333333;    
-}
-
-.fa-heart {
-    	color: #E4287C;
 }
 
 #main_content {

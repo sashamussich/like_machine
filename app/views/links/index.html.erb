@@ -4,7 +4,7 @@
     <% links.each do |link| %>
       <div class="link row clearfix">
         <h2>
-          <%= link_to link.title, link, class: "link_color"  %><br>
+          <%= link_to link.title, link.url, class: "link_color"  %><br>
           <small>Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
         </h2>
 
@@ -30,6 +30,22 @@
               </span>     
             <% end %>
           </div>
+          <% if link.user == current_user %>
+            <div class="btn-group">
+              <%= link_to edit_link_path(link), class: "btn btn-default btn-sm" do %>
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-pencil fa-stack-1x"></i>
+                  </span>
+                  Edit
+              <% end %>
+              <%= link_to link, method: :delete, data: { confirm: 'Are you sure you want to delete?' }, class: "btn btn-default btn-sm" do %>
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-trash fa-stack-1x"></i>
+                  </span>
+                  Delete
+              <% end %>
+            </div>
+          <% end %>
           <% else %>
             <div class="btn-group">
               <%= link_to like_link_path(link), method: :put, disabled: true, class: "btn btn-default btn-sm" do %>

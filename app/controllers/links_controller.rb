@@ -38,17 +38,13 @@ class LinksController < ApplicationController
   def update
     respond_to do |format|
       if @link.update(link_params)
-        format.html { redirect_to @link, notice: 'Link was successfully updated.' }
-        format.json { render :show, status: :ok, location: @link }
+        format.html { redirect_to root_path, flash: {success: 'Link was successfully updated.' } }
       else
-        format.html { render :edit }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
+        format.html { redirect_to :back, flash: { error: @link.errors} }
       end
     end
   end
 
-  # DELETE /links/1
-  # DELETE /links/1.json
   def destroy
     @link.destroy
     respond_to do |format|

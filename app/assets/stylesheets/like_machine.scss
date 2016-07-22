@@ -1,0 +1,93 @@
+html, body {
+	font-family: 'Raleway', sans-serif;
+}
+
+#logo {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	letter-spacing: -1px;
+	padding: 15px 0;
+	a {
+		color: #E4287C;
+	}
+}
+
+.fa-heart {
+    	color: #E4287C;
+}
+
+#facebook_header {
+		margin-top: 6px;
+		margin-right: 10px;
+}
+
+.navbar-default, .well {
+	background-color: #f6fbf5;
+}
+
+.navbar-default .navbar-nav > li > a {
+	margin-right: -20px;
+	margin-left: 0px;
+}
+
+.navbar-default .navbar-nav .submit_link {
+	color: #008000;
+	font-weight: 700;
+}
+
+.navbar-default .navbar-nav #sign_out_link {
+    color: #333333;    
+}
+
+#main_content {
+	
+	.author {
+		color: #008000;
+	}
+
+	.link_color {
+		color: #E4287C;
+	}
+
+	.btn:hover {
+		background-color: #def0da;
+	}
+	
+	.fa-heart {
+    	color: #E4287C;
+	}
+
+	.fa-trash, .fa-pencil {
+    	color: #008000;
+	}
+
+	.fa-bolt {
+	    top: -5%;
+	    left: 2%;
+	    font-size: 70%;
+	}
+
+	#content {
+		float: none;
+	}
+	padding-bottom: 100px;
+	.link {
+		padding: 2em 1em;
+		border-bottom: 1px solid #e9e9e9;
+		margin-left: inherit;
+		.title {
+
+			a {
+				color: #FF4500;
+			}
+		}
+	}
+	.submit {
+		background-color: #008000;
+	}
+	.back_link {
+		color: #008000;
+		font-weight: 700;
+		font-size: 15px;
+	}
+}

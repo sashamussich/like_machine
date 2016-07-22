@@ -6,13 +6,13 @@ class SessionsController < ApplicationController
 		session[:omniauth] = auth.except('extra') #session var with info from response, except extra- info that we dont need
 		user = User.sign_in_from_omniauth(auth)
 		session[:user_id] = user.id
-		redirect_to root_url, notice: "Sucessfully signed in."
+		redirect_to root_url, flash: { notice: "#{user.name}, welcome to Like Machine."}
 	end
 
 	def destroy
-		session[:user_id] = nil
-		session[:omniauth] = nil
-		redirect_to root_url, notice: "Sucessfully signed out."
+		session.delete :user_id
+		session.delete :omniauth
+		redirect_to root_url, notice: "You sucessfully signed out."
 	end
 
 end

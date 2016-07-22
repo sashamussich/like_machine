@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   
-  before_action :set_link, only: [:show, :edit, :update, :destroy]
+  before_action :set_link, only: [:edit, :update, :destroy, :upvote, :downvote]
   
   before_action :set_auth#, except: [:index]
 
@@ -54,8 +54,7 @@ class LinksController < ApplicationController
   end
 
   def upvote
-    @link = Link.find(params[:id])
-    @link.upvote_by current_user
+    @link.upvote_from current_user
     respond_to do |format|
       format.html { redirect_to :back }
       format.js { render layout: false }
@@ -63,8 +62,7 @@ class LinksController < ApplicationController
   end
 
   def downvote
-    @link = Link.find(params[:id])
-    @link.downvote_by current_user
+    @link.downvote_from current_user
     respond_to do |format|
       format.html { redirect_to :back }
       format.js { render layout: false }

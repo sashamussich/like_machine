@@ -1,5 +1,14 @@
 <% flash.each do |type, message| %>
-  <div class="alert <%= bootstrap_class_for(type) %> fade in">
+  <div id="alert_messages" class="alert <%= bootstrap_class_for(type) %> fade in">
     <%= message %>
   </div>
 <% end %>
+
+<script>
+	setTimeout(function(){
+	    $('#alert_messages').fadeTo("slow", 0.1, function(){
+	        $(this).alert('close')
+	    });     
+    }, 3000)
+</script>
+

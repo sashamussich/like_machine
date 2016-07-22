@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+	acts_as_voter
+
 	has_many :links
 
 	def self.sign_in_from_omniauth auth #auth is response

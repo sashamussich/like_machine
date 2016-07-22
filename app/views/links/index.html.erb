@@ -1,5 +1,5 @@
 <% @hash.map do |date, links| %>
-  <div class="well date_color"> 
+  <div id="well_custom" class="well c"> 
     <div class="back_link"><%= date %></div>
     <% links.each do |link| %>
       <div class="link row clearfix">
@@ -75,4 +75,4 @@
   $( ".heart" ).click(function() {
     $(this).children(".heart_jump").animateCss('wobble');
   });
-</script>>
+</script>

@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   
-  before_action :set_link, only: [:edit, :update, :destroy, :upvote, :downvote]
+  before_action :set_link, only: [:edit, :update, :destroy, :like, :dislike]
   
   before_action :set_auth#, except: [:index]
 
@@ -19,9 +19,6 @@ class LinksController < ApplicationController
   def edit
   end
 
-
-  # POST /links
-  # POST /links.json
   def create
     @link = current_user.links.build(link_params)
 
@@ -33,8 +30,6 @@ class LinksController < ApplicationController
     
   end
 
-  # PATCH/PUT /links/1
-  # PATCH/PUT /links/1.json
   def update
     respond_to do |format|
       if @link.update(link_params)
@@ -53,7 +48,7 @@ class LinksController < ApplicationController
     end
   end
 
-  def upvote
+  def like
     @link.upvote_from current_user
     respond_to do |format|
       format.html { redirect_to :back }
@@ -61,7 +56,7 @@ class LinksController < ApplicationController
     end
   end
 
-  def downvote
+  def dislike
     @link.downvote_from current_user
     respond_to do |format|
       format.html { redirect_to :back }
@@ -70,12 +65,10 @@ class LinksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_link
       @link = Link.find(params[:id]) || @link
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
       params.require(:link).permit(:title, :url)
     end

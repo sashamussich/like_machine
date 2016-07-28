@@ -1,4 +1,4 @@
-require './lib/DateStuffies'
+require './lib/date_stuffies'
 
 class Link < ActiveRecord::Base
    

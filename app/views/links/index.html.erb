@@ -5,7 +5,7 @@
       <div class="link row clearfix">
         <h2>
           <%= link_to link.title, link.url, class: "link_color"  %><br>
-          <small>Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
+          <small>Posted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
         </h2>
 
         <% if current_user %>

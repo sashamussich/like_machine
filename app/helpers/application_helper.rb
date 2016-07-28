@@ -14,4 +14,20 @@ module ApplicationHelper
 	    flash_type.to_s
 	  end
 	end
+
+	def pluralize_like link
+		if link.get_upvotes.size > 1
+			"Like".pluralize 
+		else
+			"Like"
+		end
+	end
+
+	def pluralize_dislike link
+		if link.get_downvotes.size > 1
+			"Dislike".pluralize 
+		else
+			"Dislike"
+		end
+	end
 end

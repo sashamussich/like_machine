@@ -26,3 +26,16 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+Assets problem solved on Production 
+Problem:  assets not compiling on Production -> in log  i couldnt see that assets were precompiling 
+I precompiled them localy and it didnt work all of them. Google font wasnt working.
+
+solution:
+1. deleting public/assets 
+2. rake assets:clean and than push to master and deploy
+
+
+
+

@@ -10,5 +10,6 @@ module Likemachine
   class Application < Rails::Application
     config.autoload_paths += %W["#{config.root}/app/validators/"]
     config.autoload_paths << Rails.root.join('lib')
+    config.serve_static_assets = true
   end
 end

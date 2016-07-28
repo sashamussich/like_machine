@@ -1,4 +1,4 @@
-require './lib/date_stuffies'
+require './lib/date_stuffies' #heroku deployment doesnt work without this
 
 class Link < ActiveRecord::Base
    
@@ -9,7 +9,7 @@ class Link < ActiveRecord::Base
    validates :title, presence: true, uniqueness: true
    validates :url, :url => true, :presence => true, uniqueness: true
 
-   default_scope { order('created_at desc, cached_votes_up desc') } 
+   default_scope { order('Date(created_at) desc, cached_votes_up desc') } 
 
    def self.make_hash_by_date links
     	# self.sort_by_highest_votes_score hash

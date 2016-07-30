@@ -1,0 +1,19 @@
+<%= link_to like_link_path(link), method: :get, class: "btn btn-default btn-sm like_link_#{link.id} heart" do %>
+  <span class="fa-stack fa-1x heart_jump">
+    <i class="fa fa-heart fa-stack-1x"></i>
+  </span>
+  <%= pluralize_like link %>
+  <span class="likes_count_<%=link.id%>">
+    <%= link.get_upvotes.size %>
+  </span>
+<% end %>
+<%= link_to dislike_link_path(link), method: :get, class: "btn btn-default btn-sm unlike_link_#{link.id}" do %>
+  <span class="fa-stack fa-1x">
+    <i class="fa fa-heart fa-stack-1x"></i>
+    <i class="fa fa-bolt fa-stack-1x fa-inverse"></i>
+  </span>
+  <%= pluralize_dislike link %>
+  <span class="unlikes_count_<%=link.id%>">
+    <%= link.get_downvotes.size %>   
+  </span>     
+<% end %>

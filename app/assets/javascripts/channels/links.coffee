@@ -7,13 +7,19 @@ App.links = App.cable.subscriptions.create "LinksChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    #$('.heart').append "#{data}"
+    alert(data)
 
-  update: (link) ->
-    @perform 'update', link: link
+  vote: (link) ->
+    @perform 'vote', link
 
 
-  $(".heart").on "click", (event) -> 
-  	App.links.update event.target.value 
-  	event.target.value = '' 
-  	event.preventDefault()
+  $(document).on 'click', '.like_link, .dislike_link', -> 
+    link_id = $(this).data("link-id")
+    current_user_id = $(this).data("current-user-id")
+    if $(this).hasClass("like_link") == true
+        vote = "like"
+    else
+        vote = "dislike"
+    linkJSON = {"link_id":link_id, "current_user_id":current_user_id, "vote":vote}
+    #console.log(linkJSON)
+    App.links.vote(linkJSON)

@@ -17,4 +17,14 @@ class Link < ActiveRecord::Base
      hash = links.group_by{|link| DateStuffies.pretty_just_date_format link.created_at}
    end
 
+   def self.vote data
+      link = Link.find data['link_id']
+      current_user = User.find data['current_user_id']
+      if data['vote'] == "like"
+        link.upvote_from current_user
+      else
+        link.downvote_from current_user
+      end
+   end
+
 end

@@ -10,5 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  # def set_current_user
+  #   User.current = User.find(session[:user_id])
+  # end
   
 end

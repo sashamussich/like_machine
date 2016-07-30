@@ -1,4 +1,5 @@
-<%= link_to like_link_path(link), method: :get, class: "btn btn-default btn-sm like_link_#{link.id} heart" do %>
+<div class="btn-group">
+<div class="btn btn-default btn-sm like_link heart" data-link-id ='<%= link.id %>' data-current-user-id='<%= current_user.id %>'>
   <span class="fa-stack fa-1x heart_jump">
     <i class="fa fa-heart fa-stack-1x"></i>
   </span>
@@ -6,8 +7,8 @@
   <span class="likes_count_<%=link.id%>">
     <%= link.get_upvotes.size %>
   </span>
-<% end %>
-<%= link_to dislike_link_path(link), method: :get, class: "btn btn-default btn-sm unlike_link_#{link.id}" do %>
+</div>
+<div class="btn btn-default btn-sm dislike_link" data-link-id ='<%= link.id %>' data-current-user-id='<%= current_user.id %>' >
   <span class="fa-stack fa-1x">
     <i class="fa fa-heart fa-stack-1x"></i>
     <i class="fa fa-bolt fa-stack-1x fa-inverse"></i>
@@ -16,4 +17,6 @@
   <span class="unlikes_count_<%=link.id%>">
     <%= link.get_downvotes.size %>   
   </span>     
-<% end %>
+</div>
+</div>
+                                                                   

@@ -1,0 +1,37 @@
+0000000000000000000000000000000000000000 fb3d04d8d36787f291949d0cbb6bdc1d256d88b3 sasha mussich <alexandra.muisch@gmail.com> 1468960194 -0300	commit (initial): easy dev-initial things
+fb3d04d8d36787f291949d0cbb6bdc1d256d88b3 bd30840802f4e1ea2f3f1d03d0619e6b8bd7a4cc sasha mussich <alexandra.muisch@gmail.com> 1468963582 -0300	commit: resolved facebook bug
+bd30840802f4e1ea2f3f1d03d0619e6b8bd7a4cc 6345123cdff1433969bac6901a9e78e0fea282be sasha mussich <alexandra.muisch@gmail.com> 1469106905 -0300	commit: sorted by newest date, css improved, notlogged users cant click on buttons, code smell index view=> #todo!!!
+6345123cdff1433969bac6901a9e78e0fea282be 824a5dd5019194571f434a236e3b70c3d2fb55aa sasha mussich <alexandra.muisch@gmail.com> 1469109518 -0300	commit: just nice date format added
+824a5dd5019194571f434a236e3b70c3d2fb55aa b49111b93e6e187fb7a266fd7f61eed32d87621e sasha mussich <alexandra.muisch@gmail.com> 1469112424 -0300	commit: working so far very well
+b49111b93e6e187fb7a266fd7f61eed32d87621e c50893f2d569567213f1bff25f36b0c19f306521 sasha mussich <alexandra.muisch@gmail.com> 1469130405 -0300	commit: ajax working buttons working, make code more beautiful #todo
+c50893f2d569567213f1bff25f36b0c19f306521 9fbfadc9b22c1bd1e6f6357bb8ebd8a695287d9f sasha mussich <alexandra.muisch@gmail.com> 1469134217 -0300	commit: js improved
+9fbfadc9b22c1bd1e6f6357bb8ebd8a695287d9f 2da5fc2340a823a4964fadb4b8cd919d64b23bf0 sasha mussich <alexandra.muisch@gmail.com> 1469139499 -0300	commit: added custom validator for url, jquery repaired
+2da5fc2340a823a4964fadb4b8cd919d64b23bf0 596d079ca22c7833c169a0ca6ffbe1738bde04de sasha mussich <alexandra.muisch@gmail.com> 1469141720 -0300	commit: added edit and bit of styling
+596d079ca22c7833c169a0ca6ffbe1738bde04de acdb2af8eaf9540f0e934f48abfca19e188c63d5 sasha mussich <alexandra.muisch@gmail.com> 1469143511 -0300	commit: animations added
+acdb2af8eaf9540f0e934f48abfca19e188c63d5 a61490e6e665b39e420c32b3ef4a89f98746675d sasha mussich <alexandra.muisch@gmail.com> 1469144129 -0300	commit: heart pumps without all button
+a61490e6e665b39e420c32b3ef4a89f98746675d 6b03277c2bc94fa7e02d6b4fd0d1c9411b303e9d sasha mussich <alexandra.muisch@gmail.com> 1469144372 -0300	commit: bug resolved
+6b03277c2bc94fa7e02d6b4fd0d1c9411b303e9d 666c564c7b385c45b93b03f72ee65e071717b82f sasha mussich <alexandra.muisch@gmail.com> 1469192735 -0300	commit: VM bugging, added some styling and repaired sorting
+666c564c7b385c45b93b03f72ee65e071717b82f 94a2ff041d29057b8570872bf88d0209e9825cd8 sasha mussich <alexandra.muisch@gmail.com> 1469541072 -0300	commit: heroku stuffies
+94a2ff041d29057b8570872bf88d0209e9825cd8 7712c5cb38ea30f47e4f346d0021078b9930454d sasha mussich <alexandra.muisch@gmail.com> 1469641315 -0300	commit: heroku bundler bug resolved
+7712c5cb38ea30f47e4f346d0021078b9930454d cae7b35456a8aec9749cafb866097a9d42f37772 sasha mussich <alexandra.muisch@gmail.com> 1469641490 -0300	commit: heroku bundler bug resolved number 2
+cae7b35456a8aec9749cafb866097a9d42f37772 33f6736d0464cbeea813209ef03337c98ea48185 sasha mussich <alexandra.muisch@gmail.com> 1469701462 -0300	commit: gemfile altered - postgres
+33f6736d0464cbeea813209ef03337c98ea48185 19c5d3c985e6b2bdef86815f20c0da8c3d559548 sasha mussich <alexandra.muisch@gmail.com> 1469702118 -0300	commit: heroku bug altered link.rb
+19c5d3c985e6b2bdef86815f20c0da8c3d559548 cc4f9d8a4b75b59483cf539d63f52ce718ea8f04 sasha mussich <alexandra.muisch@gmail.com> 1469703980 -0300	commit: secret.yml for facebook auth
+cc4f9d8a4b75b59483cf539d63f52ce718ea8f04 4007936e78cd9c265ab422f722ef52ffffa8a500 sasha mussich <alexandra.muisch@gmail.com> 1469704416 -0300	commit: production heroku bug - doesnt recognize lib classes :(
+4007936e78cd9c265ab422f722ef52ffffa8a500 ed8d92d265daadea4fc2e05e2e34447b1c188410 sasha mussich <alexandra.muisch@gmail.com> 1469704564 -0300	commit: wrong name in require
+ed8d92d265daadea4fc2e05e2e34447b1c188410 f48de271d7a939212ab592d605ab29d67db872bb sasha mussich <alexandra.muisch@gmail.com> 1469704787 -0300	commit: order by date and number of likes returned
+f48de271d7a939212ab592d605ab29d67db872bb 300d52c0b382a4eeb4308ccdf7bd1c90e84c9837 sasha mussich <alexandra.muisch@gmail.com> 1469707243 -0300	commit: improved oreder scope for link model
+300d52c0b382a4eeb4308ccdf7bd1c90e84c9837 fb54d3f64ade23eb1c552794743c5ec4b8677880 sasha mussich <alexandra.muisch@gmail.com> 1469711849 -0300	commit: a bit of styling - favicon added
+fb54d3f64ade23eb1c552794743c5ec4b8677880 cfb226fa1d8cb28649b9ef7e847504ae3ae5a799 sasha mussich <alexandra.muisch@gmail.com> 1469712294 -0300	commit: production assets compiled
+cfb226fa1d8cb28649b9ef7e847504ae3ae5a799 a2426b3070f3474687d5ced3483086da1b8be6ec sasha mussich <alexandra.muisch@gmail.com> 1469712759 -0300	commit: google font not recognized on production bug
+a2426b3070f3474687d5ced3483086da1b8be6ec 3ba6eb65036ca2cd78d641090fafa462a90dae76 sasha mussich <alexandra.muisch@gmail.com> 1469713010 -0300	commit: google fonts on production bug change
+3ba6eb65036ca2cd78d641090fafa462a90dae76 c344b3dc3f4b907eef6e51a538b171a98586a8d0 sasha mussich <alexandra.muisch@gmail.com> 1469713278 -0300	commit: google font bug :((
+c344b3dc3f4b907eef6e51a538b171a98586a8d0 9c2d836ee3b6882756f397e6cf56fe7e5aec25ac sasha mussich <alexandra.muisch@gmail.com> 1469713770 -0300	commit: trying to add cong for rails 4
+9c2d836ee3b6882756f397e6cf56fe7e5aec25ac a93efd842881d7d2745903c40279d5533a8991b1 sasha mussich <alexandra.muisch@gmail.com> 1469714196 -0300	commit: public/assets deleted
+a93efd842881d7d2745903c40279d5533a8991b1 12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 sasha mussich <alexandra.muisch@gmail.com> 1469719530 -0300	commit: added some helpers and styling
+12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 sasha mussich <alexandra.muisch@gmail.com> 1469821478 -0300	checkout: moving from master to websockets_impl
+12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 272793aeb8cc92ff8d6ee63b59101d78f9a49fbe sasha mussich <alexandra.muisch@gmail.com> 1469891024 -0300	commit: action cable- web sockets working! added successfully
+272793aeb8cc92ff8d6ee63b59101d78f9a49fbe 12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 sasha mussich <alexandra.muisch@gmail.com> 1469891033 -0300	checkout: moving from websockets_impl to master
+12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 895c7a936fffecd0a31ce9b99adf988294490f64 sasha mussich <alexandra.muisch@gmail.com> 1469893682 -0300	commit: added responsive navbar feature for mobile devices
+895c7a936fffecd0a31ce9b99adf988294490f64 272793aeb8cc92ff8d6ee63b59101d78f9a49fbe sasha mussich <alexandra.muisch@gmail.com> 1469894205 -0300	checkout: moving from master to websockets_impl
+272793aeb8cc92ff8d6ee63b59101d78f9a49fbe c2edfd5e00893137d1e6bcf300fcc51c1a288a45 sasha mussich <alexandra.muisch@gmail.com> 1469906712 -0300	commit: websockets working in general

@@ -2,7 +2,7 @@
   <div id="well_custom" class="well c"> 
     <div class="back_link"><%= date %></div>
     <% links.each do |link| %>
-      <div class="link row clearfix">
+      <div class="link_container row clearfix">
         <h2>
           <%= link_to link.title, link.url, class: "link_color"  %><br>
           <small>Posted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>

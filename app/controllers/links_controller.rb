@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   
-  #before_action :set_current_user
+  before_action :set_current_user#, except: [:index] => not good!!! index is only sure action for logged and not-looged!!!not gonna work!!!
   
   before_action :set_link, only: [:edit, :update, :destroy, :like, :dislike]
   

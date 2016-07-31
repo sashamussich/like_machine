@@ -8,7 +8,8 @@ App.links = App.cable.subscriptions.create "LinksChannel",
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
     link_id = data['link_id']
-    $('#' + link_id).html data['link_partial']
+    alert data['current_user']
+   # $('#' + link_id).html data['link_partial']
     
 
   vote: (link) ->

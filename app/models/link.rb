@@ -2,7 +2,7 @@ require './lib/date_stuffies' #heroku deployment doesnt work without this
 
 class Link < ActiveRecord::Base
    
-   after_update_commit { LinksUpdatesBroadcastJob.perform_later(self, current_user) } 
+   after_update_commit { LinksUpdatesBroadcastJob.perform_later(self, User.current) } 
 
    belongs_to :user
 
@@ -22,16 +22,12 @@ class Link < ActiveRecord::Base
    def self.vote data
       link = Link.find data['link_id']
       current_user = User.find data['current_user_id']
+      User.current = current_user  #sets current user for current Thread in ActionCable server
       if data['vote'] == "like"
         link.upvote_from current_user
       else
         link.downvote_from current_user
       end
-   end
-
-   def current_user
-      puts "*******************" + User.current
-      User.current
-   end
+   end 
 
 end

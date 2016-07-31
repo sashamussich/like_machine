@@ -2,6 +2,23 @@ html, body {
 	font-family: 'Raleway', sans-serif;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+}
+
 #logo {
 	font-family: 'Raleway', sans-serif;
 	font-size: 30px;
@@ -91,3 +108,17 @@ html, body {
 		font-size: 15px;
 	}
 }
+
+	.bg-4 {
+    	background-color: #def0da;
+    	color: #008000;
+	}
+
+	.container-fluid {
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+
+	.green {
+		color: #008000;
+	}

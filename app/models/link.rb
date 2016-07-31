@@ -2,6 +2,8 @@ require './lib/date_stuffies' #heroku deployment doesnt work without this
 
 class Link < ActiveRecord::Base
    
+   after_update_commit { LinksUpdatesBroadcastJob.perform_later self } 
+
    belongs_to :user
 
    acts_as_votable

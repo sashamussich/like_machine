@@ -10,7 +10,6 @@ class LinksChannel < ApplicationCable::Channel
   end
 
   def vote data
-  	#ActionCable.server.broadcast "links_channel", link: data['link']
   	Link.vote data 	
   end
 end

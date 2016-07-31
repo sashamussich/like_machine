@@ -9,7 +9,7 @@
         </h2>
 
         <% if current_user %>
-          <div class="btn-group">
+          <div class="btn-group" id='<%= link.id %>'>
             <%= render link %>
           </div>
           <% if link.user == current_user %>

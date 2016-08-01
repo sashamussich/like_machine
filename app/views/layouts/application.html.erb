@@ -24,10 +24,12 @@
 		    			<li id="facebook_header">Hello, <%= current_user.name %>  <%= image_tag(@auth['info']['image'], width: '40', height: '40', class: 'img-circle') %> </li> 
 		    			<li><%= link_to 'Post link', new_link_path, class: "submit_link" %></li>
 		    			<li id="sign_out_link"><%= link_to "Sign out", sign_out_path, mehtod: :delete %></li>
+		    			<li class="ws_connection_status"><p class="label label-success">Connected to ACable</p></li>	
 	    			</ul>
 	    		<% else %>
 	    			<ul class="nav navbar-nav navbar-right">
 	    				<li id="facebook_header">Sign in with   <span> <%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle') %> <% end %></span></li>
+	    				<li class="ws_connection_status"><p class="label label-warning">Disconnected from ACable</p></li>
 	    			</ul>
 	    		<% end %>
 	        </nav>

@@ -1,9 +1,11 @@
 App.links = App.cable.subscriptions.create "LinksChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
+    $('.ws_connection_status').html '<p class="label label-success">Connected to ACable</p>'
 
   disconnected: ->
     # Called when the subscription has been terminated by the server
+    $('.ws_connection_status').html '<p class="label label-warning">Disconnected from ACable</p>'
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel

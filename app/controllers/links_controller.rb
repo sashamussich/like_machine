@@ -7,6 +7,8 @@ class LinksController < ApplicationController
   def index
     links = Link.all
     @hash = Link.make_hash_by_date links
+
+    flash[:notice] = "Please log in to experience *real time* app through WebSockets and Rails 5 <3 " unless current_user
   end
 
   def show

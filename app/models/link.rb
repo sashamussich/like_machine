@@ -2,6 +2,8 @@ require './lib/date_stuffies' #heroku deployment doesnt work without this
 
 class Link < ActiveRecord::Base
    
+   after_update_commit { LinksUpdatesBroadcastJob.perform_later(self, User.current) } 
+
    belongs_to :user
 
    acts_as_votable
@@ -16,5 +18,16 @@ class Link < ActiveRecord::Base
        # links.to_a.sort_by{|link| link[:cashed_votes_up]}.reverse
      hash = links.group_by{|link| DateStuffies.pretty_just_date_format link.created_at}
    end
+
+   def self.vote data
+      link = Link.find data['link_id']
+      current_user = User.find data['current_user_id']
+      User.current = current_user  #sets current user for current Thread in ActionCable server
+      if data['vote'] == "like"
+        link.upvote_from current_user
+      else
+        link.downvote_from current_user
+      end
+   end 
 
 end

@@ -2,6 +2,23 @@ html, body {
 	font-family: 'Raleway', sans-serif;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+}
+
 #logo {
 	font-family: 'Raleway', sans-serif;
 	font-size: 30px;
@@ -39,6 +56,11 @@ html, body {
     color: #333333;    
 }
 
+.navbar-default .navbar-nav .ws_connection_status {
+	margin-top: 13px;
+	margin-left: 30px;
+}
+
 #main_content {
 
 	padding-bottom: 100px;
@@ -68,7 +90,12 @@ html, body {
 	    left: 2%;
 	    font-size: 70%;
 	}
-	.link {
+
+	#content {
+		float: none;
+	}
+	padding-bottom: 100px;
+	.link_container {
 		padding: 2em 1em;
 		border-bottom: 1px solid #e9e9e9;
 		margin-left: inherit;
@@ -87,4 +114,18 @@ html, body {
 		font-weight: 700;
 		font-size: 15px;
 	}
+}
+
+.bg-4 {
+	background-color: #def0da;
+	color: #008000;
+}
+
+.container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.green {
+	color: #008000;
 }

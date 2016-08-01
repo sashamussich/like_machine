@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  
+    
   before_action :set_link, only: [:edit, :update, :destroy, :like, :dislike]
   
   before_action :set_auth#, except: [:index]
@@ -48,21 +48,21 @@ class LinksController < ApplicationController
     end
   end
 
-  def like
-    @link.upvote_from current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render layout: false }
-    end
-  end
+  # def like
+  #   @link.upvote_from current_user
+  #   respond_to do |format|
+  #     format.html { redirect_to :back }
+  #     format.js { render layout: false }
+  #   end
+  # end
 
-  def dislike
-    @link.downvote_from current_user
-    respond_to do |format|
-      format.html { redirect_to :back }
-      format.js { render layout: false }
-    end
-  end
+  # def dislike
+  #   @link.downvote_from current_user
+  #   respond_to do |format|
+  #     format.html { redirect_to :back }
+  #     format.js { render layout: false }
+  #   end
+  # end
 
   private
     def set_link
@@ -76,5 +76,4 @@ class LinksController < ApplicationController
     def set_auth
       @auth = session[:omniauth] if session[:omniauth]
     end
-
 end

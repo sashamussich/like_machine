@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 sasha mussich <alexandra.muisch@gmail.com> 1469821478 -0300	branch: Created from HEAD
+12c44f39a2e8e17e94bf9bdb646a102f74e90cd2 272793aeb8cc92ff8d6ee63b59101d78f9a49fbe sasha mussich <alexandra.muisch@gmail.com> 1469891024 -0300	commit: action cable- web sockets working! added successfully
+272793aeb8cc92ff8d6ee63b59101d78f9a49fbe c2edfd5e00893137d1e6bcf300fcc51c1a288a45 sasha mussich <alexandra.muisch@gmail.com> 1469906712 -0300	commit: websockets working in general

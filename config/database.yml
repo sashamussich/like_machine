@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
-  password: sasha
-  username: sasha
+  password: <%= ENV["pass"] %>
+  username: <%= ENV["username"] %>
 
 development:
   <<: *default
